@@ -1,2 +1,31 @@
-Lorem ipsum dolor sit amet consectetur adipisicing elit. At unde, ipsa incidunt quisquam nulla sequi dignissimos? Facilis, deserunt tempore quod dolorem rerum libero recusandae officia provident pariatur vel fugiat! Itaque.
+<!-- <ul>
+    <li *ngFor="let gif of resultados">
+        {{gifs.title}}
 
+    </li>
+
+</ul> -->
+
+<!-- Creo tarjetas -->
+<div class="row">
+    <div *ngFor="let gif of resultados"
+        class="col-md-4 col-sm-6">
+
+        <div class="card">
+            <img [src]="gif.images.downsized_medium.url" 
+            [alt]="gif.title"
+            class="card-img-top">
+            <div class="card-body">
+                <p class="card-text">
+                    {{gif.title}}
+                    <!-- {{gif.images.downsized_medium.url}} -->
+                </p>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
